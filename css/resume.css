@@ -164,19 +164,19 @@ audio {
 
 @keyframes move1 {
     0%{
-        transform: scale(1);
+        -webkit-transform: scale(1);
 
     }
     100%{
-        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
     }
 }
 @keyframes move3{
     0%{
-        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
      }
      100%{
-     transform: rotateX(360deg);
+         -webkit-transform: rotateX(360deg);
     }
 }
 @keyframes move2 {
@@ -189,10 +189,11 @@ audio {
 }
  #a1 div:nth-child(2) p:nth-child(1){
      animation: move 2s 2s 3,move1 2s 10s ease-in-out;
+     -webkit-animation: move 2s 2s 3,move1 2s 10s ease-in-out;
 }
  #a1 div:nth-child(2) p:nth-child(2){
      animation: move 2s 5s 3;
-
+     -webkit-animation: move 2s 5s 3;
 }
 .a2{
     height: 100%;
@@ -218,6 +219,7 @@ audio {
     transform: translate(0,0);
     -webkit-transform: translate(0,0);
     transition: 2s;
+    -webkit-transition: 2s;
 }
 .a2 .b2,.a2 .b3,.a2 .b4,.a2 .b5{
     height: 200px;
@@ -253,6 +255,9 @@ audio {
     transform: translate(600px,0);
 }
 #a2 div:nth-child(2){
+    -webkit-transform: translate(0,0);
+    -webkit-transition: 1s 2s;
+    -webkit-animation: move2 3s 7s;
     transform: translate(0,0);
     transition: 1s 2s;
     animation: move2 3s 7s;
@@ -262,18 +267,27 @@ audio {
     transform: translate(0,0);
     transition: 2s 4s;
     animation: move3 3s 7s;
+    -webkit-transform: translate(0,0);
+    -webkit-transition: 2s 4s;
+    -webkit-animation: move3 3s 7s;
 
 }
 #a2 div:nth-child(4){
     transform: translate(0,0);
     transition:2s 4s;
     animation: move3 3s 7s;
+    -webkit-transform: translate(0,0);
+    -webkit-transition:2s 4s;
+    -webkit-animation: move3 3s 7s;
 
 }
 #a2 div:nth-child(5){
     transform: translate(0,0);
     transition: 4s 2s;
     animation: move2 3s 7s;
+    -webkit-transform: translate(0,0);
+    -webkit-transition: 4s 2s;
+    -webkit-animation: move2 3s 7s;
 }
 .b6{
     position: absolute;
@@ -289,6 +303,8 @@ audio {
     opacity: 1;
     transform: translate(0,0);
     transition: 2s;
+    -webkit-transform: translate(0,0);
+    -webkit-transition: 2s;
 
 }
  .b6 p{
@@ -338,26 +354,41 @@ audio {
     transform:rotateZ(20deg);
     transform-origin: left center;
     transition:2s;
+    -webkit-transform:rotateZ(20deg);
+    -webkit-transform-origin: left center;
+    -webkit-transition:2s;
 }
 #a3 div:nth-child(2){
     transform: rotateZ(0deg);
     transform-origin: left center;
     transition: 2s 2s;
+    -webkit-transform: rotateZ(0deg);
+    -webkit-transform-origin: left center;
+    -webkit-transition: 2s 2s;
 }
 #a3 div:nth-child(3) {
     transform: rotateZ(-20deg);
     transform-origin: left center;
     transition: 2s 4s;
+    -webkit-transform: rotateZ(-20deg);
+    -webkit-transform-origin: left center;
+    -webkit-transition: 2s 4s;
 }
 #a3 div:nth-child(4){
     transform: rotateZ(-40deg);
     transform-origin: left center;
     transition: 2s 6s;
+    -webkit-transform: rotateZ(-40deg);
+    -webkit-transform-origin: left center;
+    -webkit-transition: 2s 6s;
 }
 #a3 div:nth-child(5){
     transform: rotateZ(-60deg);
     transform-origin: left center;
     transition: 2s 8s;
+    -webkit-transform: rotateZ(-60deg);
+    -webkit-transform-origin: left center;
+    -webkit-transition: 2s 8s;
 }
 .a3 p{
     position: absolute;
@@ -379,6 +410,8 @@ audio {
 #a4 .d1{
    transform: translate(0,0);
     transition: 2s 2s;
+    -webkit-transform: translate(0,0);
+    -webkit-transition: 2s 2s;
 }
 .d1 div{
     background: #000;
@@ -401,6 +434,8 @@ audio {
 #a4 .d2{
     transform: translate(0,0);
     transition: 2s;
+    -webkit-transform: translate(0,0);
+    -webkit-transition: 2s;
 }
 .d2 div{
     padding: 20px;
@@ -429,15 +464,19 @@ audio {
 }
 #a4 .d2 div:nth-child(1){
     animation: move6 1s 0s infinite;
+    -webkit-animation: move6 1s 0s infinite;
 }
 #a4 .d2 div:nth-child(2){
     animation: move6 1s 1s infinite;
+    -webkit-animation: move6 1s 1s infinite;
 }
 #a4 .d2 div:nth-child(3){
     animation: move6 1s 2s infinite;
+    -webkit-animation: move6 1s 2s infinite;
 }
 #a4 .d2 div:nth-child(4){
     animation: move6 1s 3s infinite;
+    -webkit-animation: move6 1s 3s infinite;
 }
 .a4 span{
     position: absolute;
@@ -525,6 +564,8 @@ height: 30px;
 #a5 div{
     transform: translate(0,0);
     transition:3s;
+    -webkit-transform: translate(0,0);
+    -webkit-transition:3s;
 }
 #list li:nth-child(6){
     width: 100%;
@@ -592,6 +633,8 @@ height: 30px;
 }
 #a6{
     opacity: 1;
+    transform:scale(0.5) rotateX(0deg) rotateY(-3600deg) rotateZ(0deg);
+    transition:-webkit-transform 40s,opacity 1s;
     -webkit-transform:scale(0.5) rotateX(0deg) rotateY(-3600deg) rotateZ(0deg);
     -webkit-transition:-webkit-transform 40s,opacity 1s;
 }
