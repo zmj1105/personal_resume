@@ -34,10 +34,6 @@ function one(){
     two();
 }
 function two(){
-    //  var firLi=document.querySelector(".a1");
-    //console.log(firLi);
-    //    firLi.firstChild.id="a1";
-
     [].forEach.call(oLis,function(){
         var oLi = arguments[0];
         oLi.index = arguments[1];
@@ -68,12 +64,12 @@ function two(){
         if(movePos>0){
 
             this.prevSIndex = (index == 0?oLis.length-1:index-1);
-
-            var duration = -winH+movePos;
+              var duration =movePos;
+            //var duration = -winH+movePos;
         }else if(movePos<0){
             this.prevSIndex = (index == oLis.length-1?0:index+1);
-
-            var duration = winH+movePos;
+            var duration =movePos;
+           // var duration = winH+movePos;
         }
 
         this.style.webkitTransform = "scale("+(1-Math.abs(movePos)/winH*1/2)+")  translate(0,"+movePos+"px)";
